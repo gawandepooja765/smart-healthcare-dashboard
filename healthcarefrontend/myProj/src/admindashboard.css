@@ -1,0 +1,48 @@
+/* Sidebar container */
+.sidebar {
+  background: white;
+  min-height: 100vh;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+}
+
+/* Menu buttons */
+.menu-item {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #444;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.menu-item:hover {
+  background: #f4f6f9;
+  transform: translateX(4px);
+}
+
+/* Active tab */
+.menu-item.active {
+  background: linear-gradient(
+    90deg,
+    #4CAF50,
+    #2e7d32
+  );
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(76,175,80,0.3);
+}
+
+/* Logout style */
+.menu-item.logout {
+  color: #d32f2f;
+}
+
+.menu-item.logout:hover {
+  background: #fdecea;
+}

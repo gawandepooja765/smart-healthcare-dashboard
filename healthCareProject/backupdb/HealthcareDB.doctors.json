@@ -1,0 +1,94 @@
+[{
+  "_id": {
+    "$oid": "69c8e879d4a3300cd3b4dce8"
+  },
+  "name": "Charlie Dsouza",
+  "email": "pooja.glassberry@gmail.com",
+  "password": "$2b$10$NmBS6HIMCiq6iXtIZXI.MuFgL7m4Mxy4WanhDfBoAruzgTs9PaxIG",
+  "role": "doctor",
+  "isVerified": false,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-03-29T08:53:13.454Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T13:39:04.825Z"
+  },
+  "__v": 0,
+  "loginAttempts": 0,
+  "lockUntil": null,
+  "resetOTP": null,
+  "resetOTPExpire": null
+},
+{
+  "_id": {
+    "$oid": "69c966c701ce80ea2bffacce"
+  },
+  "name": "Pit  William",
+  "email": "imuideveloper@gmail.com",
+  "password": "$2b$10$3w.jRYIpu6iX/.dHHcr2we4QDp0w0ahy0U4Rs/8RnF..1XWnU4ae2",
+  "role": "doctor",
+  "isVerified": false,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-03-29T17:52:07.412Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-29T17:54:38.804Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca21702703fbf52edd0359"
+  },
+  "name": "Jenny kom",
+  "email": "paratkar.pooja@gmail.com",
+  "password": "$2b$10$YXIdxz5wnpprC2xlus2VI.r/JO/EbVvEvCGl8Ih2PX2HV7P8tgCYm",
+  "role": "doctor",
+  "isVerified": false,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-03-30T07:08:32.208Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T07:14:04.451Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca8a27e74e17a15e23fd6a"
+  },
+  "name": "Tom Jim",
+  "email": "gawandepooja765@gmail.com",
+  "password": "$2b$10$7Cyrx1W/bfk7Nfoz/HF1Fu94gXtcd2j2q96WurXVlsxNWyg5FJ5Fi",
+  "role": "doctor",
+  "isVerified": false,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-03-30T14:35:20.022Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T14:37:05.682Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cab4cbe74e17a15e23fe34"
+  },
+  "name": "Chris J",
+  "email": "ketanjobs2022@gmail.com",
+  "password": "$2b$10$.6hQfPb5VF/Nsfu5RROYhOf8Q76tkjTUf98wwhozh6bBU9BF/9.1G",
+  "role": "doctor",
+  "isVerified": false,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-03-30T17:37:15.605Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T17:37:53.286Z"
+  },
+  "__v": 0
+}]

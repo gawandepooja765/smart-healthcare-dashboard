@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "69c8db1359f8a1fe544c3870"
+  },
+  "patientName": "Jonas Dsouza",
+  "email": "jonas@demo.com",
+  "password": "$2b$10$YbtsniJPkUFfo3FRsXQOKOx/UwOdpHdBYJihiQ6cGmpbrrgOaVYRu",
+  "role": "user",
+  "isProfileComplete": false,
+  "createdAt": {
+    "$date": "2026-03-29T07:56:03.422Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-29T07:56:03.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69c90da55d14dba90497827e"
+  },
+  "patientName": "John Deo",
+  "email": "john123@demo.com",
+  "password": "$2b$10$MntBh6dnrUUU433ajT8CQObcdc7zjBxi7tz8TladJVrHf91MZk7fe",
+  "role": "user",
+  "isProfileComplete": false,
+  "createdAt": {
+    "$date": "2026-03-29T11:31:49.707Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-29T14:08:39.947Z"
+  },
+  "__v": 0,
+  "dob": {
+    "$date": "2000-03-03T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "phNo": 7878787878
+},
+{
+  "_id": {
+    "$oid": "69ca8b5de74e17a15e23fd80"
+  },
+  "patientName": "Ket G",
+  "email": "test123@gmail.com",
+  "password": "$2b$10$0dZ1OYcbGubQFWthnyIeCe4/HK4Dp8wOwdC9DXJSZAzuB0nuvMYh2",
+  "role": "user",
+  "isProfileComplete": false,
+  "createdAt": {
+    "$date": "2026-03-30T14:40:29.108Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T16:55:23.425Z"
+  },
+  "__v": 0,
+  "dob": {
+    "$date": "2000-12-23T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "phNo": 7878787899
+},
+{
+  "_id": {
+    "$oid": "69cab19ee74e17a15e23fe03"
+  },
+  "patientName": "Marine Yok",
+  "email": "mari@demo.com",
+  "password": "$2b$10$7/FcBauh58FJU/ConWFo6evYQgUwjYeb2o.SOYqzLj2AsuRp1d0p.",
+  "role": "user",
+  "isProfileComplete": false,
+  "createdAt": {
+    "$date": "2026-03-30T17:23:42.738Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T17:24:57.837Z"
+  },
+  "__v": 0,
+  "dob": {
+    "$date": "1998-12-30T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "phNo": 9999882288
+},
+{
+  "_id": {
+    "$oid": "69cab5d9e74e17a15e23fe4d"
+  },
+  "patientName": "Mark S",
+  "email": "test@demo.com",
+  "password": "$2b$10$tgdjoBYK0SF8c7E/wzUVQePvKmaSNXEiBmz27TRjzXfrhdVQUpGSy",
+  "role": "user",
+  "isProfileComplete": false,
+  "createdAt": {
+    "$date": "2026-03-30T17:41:45.859Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T17:43:33.636Z"
+  },
+  "__v": 0,
+  "dob": {
+    "$date": "2000-05-05T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "phNo": 7878787899
+}]

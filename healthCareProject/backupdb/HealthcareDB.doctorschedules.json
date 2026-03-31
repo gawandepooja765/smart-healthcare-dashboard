@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "69c8e95789de1d5478bc9055"
+  },
+  "doctorId": {
+    "$oid": "69c8e879d4a3300cd3b4dce8"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-29T08:56:55.045Z"
+  },
+  "endTime": "20:00",
+  "slotDuration": 60,
+  "startTime": "11:00",
+  "updatedAt": {
+    "$date": "2026-03-29T09:06:21.296Z"
+  },
+  "workingDays": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69c96bf089de1d5478bc9056"
+  },
+  "doctorId": {
+    "$oid": "69c966c701ce80ea2bffacce"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-29T18:14:08.243Z"
+  },
+  "endTime": "21:00",
+  "slotDuration": 30,
+  "startTime": "14:00",
+  "updatedAt": {
+    "$date": "2026-03-30T06:53:22.847Z"
+  },
+  "workingDays": [
+    "Monday",
+    "Tuesday",
+    "Wednesday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ca22fb89de1d5478bc9057"
+  },
+  "doctorId": {
+    "$oid": "69ca21702703fbf52edd0359"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-30T07:15:07.847Z"
+  },
+  "endTime": "21:00",
+  "slotDuration": 60,
+  "startTime": "10:00",
+  "updatedAt": {
+    "$date": "2026-03-30T07:15:07.847Z"
+  },
+  "workingDays": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ca8af689de1d5478bc9058"
+  },
+  "doctorId": {
+    "$oid": "69ca8a27e74e17a15e23fd6a"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-30T14:38:46.342Z"
+  },
+  "endTime": "22:13",
+  "slotDuration": 15,
+  "startTime": "10:10",
+  "updatedAt": {
+    "$date": "2026-03-30T14:38:46.342Z"
+  },
+  "workingDays": [
+    "Tuesday",
+    "Monday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69cab55a89de1d5478bc9059"
+  },
+  "doctorId": {
+    "$oid": "69cab4cbe74e17a15e23fe34"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-30T17:39:38.030Z"
+  },
+  "endTime": "12:09",
+  "slotDuration": 15,
+  "startTime": "00:09",
+  "updatedAt": {
+    "$date": "2026-03-30T17:39:38.030Z"
+  },
+  "workingDays": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Friday",
+    "Thursday",
+    "Sunday",
+    "Saturday"
+  ]
+}]

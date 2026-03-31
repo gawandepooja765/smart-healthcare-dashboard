@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "69c8ee610d71ee93c41177cf"
+  },
+  "authDoctorId": {
+    "$oid": "69c8e879d4a3300cd3b4dce8"
+  },
+  "fullName": "Charlie Dsouza",
+  "specialization": "Cardiologist",
+  "gender": "Male",
+  "mobNum": "9876543212",
+  "exp": 7,
+  "address": "Nagpur",
+  "docImg": "/uploads/1774775905899.jpeg",
+  "createdAt": {
+    "$date": "2026-03-29T09:18:25.960Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-29T09:18:25.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca208c2703fbf52edd0345"
+  },
+  "authDoctorId": {
+    "$oid": "69c966c701ce80ea2bffacce"
+  },
+  "fullName": "Pit  William",
+  "specialization": "Neurologist",
+  "gender": "Male",
+  "mobNum": "7778882211",
+  "exp": 12,
+  "address": "Finland",
+  "docImg": "/uploads/1774854284513.jpeg",
+  "createdAt": {
+    "$date": "2026-03-30T07:04:44.527Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T07:04:44.527Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca23252703fbf52edd0366"
+  },
+  "authDoctorId": {
+    "$oid": "69ca21702703fbf52edd0359"
+  },
+  "fullName": "Jenny kom",
+  "specialization": "Cardiologist",
+  "gender": "Female",
+  "mobNum": "9876543212",
+  "exp": 9,
+  "address": "Germany",
+  "docImg": "/uploads/1774854949334.jpeg",
+  "createdAt": {
+    "$date": "2026-03-30T07:15:49.344Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T07:15:49.344Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca8b0ce74e17a15e23fd79"
+  },
+  "authDoctorId": {
+    "$oid": "69ca8a27e74e17a15e23fd6a"
+  },
+  "fullName": "Tom Jim",
+  "specialization": "Dermatologist",
+  "gender": "Male",
+  "mobNum": "9876543212",
+  "exp": 34,
+  "address": "pune",
+  "docImg": "/uploads/1774881548337.jpeg",
+  "createdAt": {
+    "$date": "2026-03-30T14:39:08.355Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T14:39:08.355Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cab581e74e17a15e23fe41"
+  },
+  "authDoctorId": {
+    "$oid": "69cab4cbe74e17a15e23fe34"
+  },
+  "fullName": "Chris J",
+  "specialization": "General Physician",
+  "gender": "Male",
+  "mobNum": "7778882211",
+  "exp": 30,
+  "address": "pune",
+  "docImg": "/uploads/1774892417755.jpeg",
+  "createdAt": {
+    "$date": "2026-03-30T17:40:17.804Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T17:40:17.804Z"
+  },
+  "__v": 0
+}]
