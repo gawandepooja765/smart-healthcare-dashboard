@@ -4,10 +4,11 @@ import axios from "axios";
 const MyAppointments = () => {
   const [appointments, setAppointments] = useState([]);
   const [activeTab, setActiveTab] = useState("upcoming");
+  const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 
   const fetchAppointments = async () => {
     const res = await axios.get(
-      "http://localhost:3000/patient/all-appointments",
+        `${API_URL}/patient/all-appointments`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`

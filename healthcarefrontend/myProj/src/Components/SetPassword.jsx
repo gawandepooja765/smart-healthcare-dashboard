@@ -7,13 +7,14 @@ const SetPassword = () => {
   const token = searchParams.get("token");
 
   const [password, setPassword] = useState("");
+  const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 
   const submitHandler = async (e) => {
     e.preventDefault();
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/auth/set-password",
+        `${API_URL}/auth/set-password`,
         {
           token,
           password

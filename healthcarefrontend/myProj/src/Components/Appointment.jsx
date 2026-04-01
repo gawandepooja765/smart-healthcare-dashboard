@@ -3,10 +3,11 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 function Appointment() {
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 const { _id } = useParams();
 const navigate = useNavigate();
-const appointmentUrl = "http://localhost:3000/auth/appointment";
-const loggedUserUrl = "http://localhost:3000/auth/logged_user";
+const appointmentUrl = `${API_URL}/auth/appointment`;
+const loggedUserUrl = `${API_URL}/auth/logged_user`;
 const [slots, setSlots] = useState([]);
 const [selectedTime, setSelectedTime] = useState("");
 const [showSlots, setShowSlots] = useState(false);
@@ -57,7 +58,7 @@ setAppointment(prev => ({
 async function fetchSlots(id, date) {
 try {
 const res = await axios.get(
-`http://localhost:3000/auth/auto-slots?doctorId=${id}&date=${date}`
+`${API_URL}/auth/auto-slots?doctorId=${id}&date=${date}`
 );
 const slotData = res.data.slots || res.data;
 setSlots(slotData);

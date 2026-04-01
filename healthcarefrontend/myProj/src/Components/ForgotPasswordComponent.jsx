@@ -7,11 +7,12 @@ export default function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 
   // Send OTP
   const handleSendOTP = async () => {
     try {
-      await axios.post("http://localhost:3000/auth/forgot-password", { email });
+      await axios.post(`${API_URL}/auth/forgot-password", { email }`);
       alert("OTP sent");
       setStep(2);
     } catch (err) {
@@ -22,7 +23,7 @@ export default function ForgotPassword() {
   // Reset Password
   const handleReset = async () => {
     try {
-      await axios.post("http://localhost:3000/auth/reset-password", {
+      await axios.post(`${API_URL}/auth/reset-password`, {
         email,
         otp,
         newPassword,

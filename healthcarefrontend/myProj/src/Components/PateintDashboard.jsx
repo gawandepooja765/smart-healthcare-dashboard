@@ -15,9 +15,10 @@ const [activeTab, setActiveTab] = useState("upcoming");
 const [activePage, setActivePage] = useState("dashboard");
 const [appointments, setAppointments] = useState([]);
 const navigate = useNavigate();
-const doctorUrl = "http://localhost:3000/auth/get/doctors";
-const loggedUrl = "http://localhost:3000/auth/logged_user";
-const appointmentUrl = "http://localhost:3000/auth/pateint-appointments";
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+const doctorUrl =  `${API_URL}/auth/get/doctors`;
+const loggedUrl = `${API_URL}/auth/logged_user`;
+const appointmentUrl = `${API_URL}/auth/pateint-appointments`;
 const token = localStorage.getItem("token");
 useEffect(() => {
 fetchDoctorData();
@@ -66,7 +67,7 @@ const confirmCancel = window.confirm(
 if (!confirmCancel) return; 
 try {
 await axios.put(
-`http://localhost:3000/auth/cancel-appointment/${id}`,
+`${API_URL}/auth/cancel-appointment/${id}`,
 {},
 {
 headers: {
@@ -87,7 +88,7 @@ if (!newDate || !newTime) return;
 try {
 // const token = localStorage.getItem("token");
 await axios.put(
-`http://localhost:3000/auth/reschedule-appointment/${id}`,
+`${API_URL}/auth/reschedule-appointment/${id}`,
 {
 appDate: newDate,
 appTime: newTime
@@ -119,7 +120,7 @@ const confirmDelete = window.confirm("Are you sure to delete profile?");
 if (!confirmDelete) return;
 try {
 await axios.delete(
-`http://localhost:3000/auth/patient/delete/${id}`,
+`${API_URL}/auth/patient/delete/${id}`,
 {
 headers: {
 Authorization: `Bearer ${token}`,
@@ -251,7 +252,7 @@ return (
             <div className="col-md-4 mb-4" key={doc._id}>
                <div className="card shadow-sm h-100 text-center p-3">
                   <img
-                     src={`http://localhost:3000${doc.docImg}`}
+                     src={`${API_URL}${doc.docImg}`}
                      alt="doctor"
                      className="rounded-circle mx-auto mb-3"
                      width="100"

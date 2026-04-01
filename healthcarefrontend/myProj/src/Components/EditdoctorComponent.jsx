@@ -5,8 +5,9 @@ import axios from 'axios';
 function EditdoctorComponent() {
 const { _id } = useParams();
 const navigate = useNavigate();
-const docurl = `http://localhost:3000/auth/edit_record/${_id}`;
-const docgetById = `http://localhost:3000/auth/get/doctors/${_id}`
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+const docurl = `${API_URL}/auth/edit_record/${_id}`;
+const docgetById = `${API_URL}/auth/get/doctors/${_id}`
 // const[getDoctor,setDoctor]=useState({})
 const [editData, setEditdata] = useState({
 fullName: "",
@@ -25,12 +26,6 @@ async function fetchApi() {
 try {
 const resById = await axios.get(docgetById)
 setEditdata(resById.data.doctor)
-// const res = await axios.put(`${docurl}/${_id}`);
-// console.log(res.data.editDoctors)
-// setEditdata(res.data.editDoctors); // adjust if backend returns {doctor: {...}}
-// if (res.data.editDoctors.docImg) {
-//   setPreview(`http://localhost:3000/${res.data.editDoctorsdocImg}`);
-// }
 } catch (error) {
 console.error('Error fetching doctor:', error);
 }

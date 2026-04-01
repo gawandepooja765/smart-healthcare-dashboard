@@ -10,6 +10,9 @@ gender: "",
 dob: "",
 address: ""
 });
+
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+
 // fill form when modal opens
 useEffect(() => {
 if (patientData) {
@@ -25,7 +28,7 @@ setFormData({
 const handleUpdate = async () => {
 try {
 await axios.put(
-`http://localhost:3000/auth/patient/update/${patientData._id}`,
+`${API_URL}/auth/patient/update/${patientData._id}`,
 formData
 );
 toast.success("Profile updated");

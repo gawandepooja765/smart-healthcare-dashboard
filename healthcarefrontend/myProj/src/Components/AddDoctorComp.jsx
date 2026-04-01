@@ -4,9 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 function AddDoctorComp() {
 const navigate = useNavigate();
-const DETAILS_URL = "http://localhost:3000/auth/add/details";
-const USER_URL = "http://localhost:3000/auth/logged_user";
-const SLOT_URL = "http://localhost:3000/auth/doctor/schedule";
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+const DETAILS_URL = `${API_URL}/auth/add/details`;
+const USER_URL = `${API_URL}/auth/logged_user`;
+const SLOT_URL = `${API_URL}/auth/doctor/schedule`;
 const [loggedData, setLoggedData] = useState(null);
 const [slots, setSlots] = useState([]);
 const [workingDays, setWorkingDays] = useState([]);

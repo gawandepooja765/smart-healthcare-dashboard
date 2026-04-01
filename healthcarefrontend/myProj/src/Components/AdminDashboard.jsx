@@ -7,10 +7,11 @@ import axios from "axios"
 import { toast } from "react-toastify";
 import AddDoctorByAdmin from "./AddDoctorByAdmin";
 const AdminDashboard = () => { 
-const doctorUrl = "http://localhost:3000/auth/get/doctors";
-const patientUrl = "http://localhost:3000/auth/get/patients";
-const appointmentUrl = "http://localhost:3000/auth/get/appointments";
-const deleteUrl = "http://localhost:3000/auth/delete_record";
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+const doctorUrl = `${API_URL}/auth/get/doctors`;
+const patientUrl = `${API_URL}/auth/get/patients`;
+const appointmentUrl = `${API_URL}/auth/get/appointments`;
+const deleteUrl = `${API_URL}/auth/delete_record`;
 const navigate = useNavigate();
 const [activePage, setActivePage] = useState("dashboard");
 const[doctor,setDoctor]=useState([])

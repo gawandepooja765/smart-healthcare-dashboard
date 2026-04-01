@@ -11,6 +11,7 @@ const PateintProfile = () => {
   });
 
   const navigate = useNavigate();
+  const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 
   const handleChange = (e) => {
     setFormData({
@@ -26,7 +27,7 @@ const PateintProfile = () => {
 
       const token = localStorage.getItem("token");
       const res = await axios.put(
-        "http://localhost:3000/auth/complete-profile",
+        `${API_URL}/auth/complete-profile`,
         formData,
         {
           headers: {

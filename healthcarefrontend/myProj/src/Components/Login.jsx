@@ -4,7 +4,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const Login = ({ setToken }) => {
-  const apiUrl = "http://localhost:3000/auth/login";
+  const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+  const apiUrl = `${API_URL}/auth/login`;
 
   const [formData, setFormData] = useState({
     email: "",

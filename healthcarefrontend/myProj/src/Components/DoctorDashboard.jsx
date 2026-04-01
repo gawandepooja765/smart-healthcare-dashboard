@@ -15,10 +15,12 @@ FaUserEdit,
 import axios, { all } from "axios";
 import "../custom_table.css";
 const DoctorDashboard = () => {
+
 const navigate = useNavigate();
 const token = localStorage.getItem("token");
-const loggedUrl = "http://localhost:3000/auth/logged_user";
-const appointmentUrl = "http://localhost:3000/auth/doctor-appointments";
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+const loggedUrl = `${API_URL}/auth/logged_user`;
+const appointmentUrl = `${API_URL}/auth/doctor-appointments`;
 const [loggedData, setLoggedData] = useState(null);
 const [appointments, setAppointments] = useState([]);
 const [upcomingAppointments, setUpcomingAppointments] = useState([]);
@@ -86,7 +88,7 @@ console.error(err);
 const handleStatusChange = async (id, newStatus) => {
 try {
 await axios.put(
-`http://localhost:3000/auth/appointment-status/${id}`,
+`${API_URL}/auth/appointment-status/${id}`,
 { status: newStatus },
 { headers: { Authorization: `Bearer ${token}` } }
 );
@@ -101,7 +103,7 @@ if (!window.confirm("Are you sure you want to deactivate your account?"))
 return;
 try {
 await axios.put(
-"http://localhost:3000/auth/doctor/deactivate",
+`${API_URL}/auth/doctor/deactivate`,
 {},
 { headers: { Authorization: `Bearer ${token}` } }
 );
@@ -119,7 +121,7 @@ setQuery(value);
 if (!value) return setSearchData([]);
 try {
 const res = await axios.get(
-`http://localhost:3000/auth/doctor/search?q=${value}`,
+`${API_URL}/auth/doctor/search?q=${value}`,
 { headers: { Authorization: `Bearer ${token}` } }
 );
 setSearchData(res.data);
@@ -161,7 +163,7 @@ return (
             <div className="card-body text-center">
                {loggedData.profile.docImg && (
                <img
-                  src={`http://localhost:3000${loggedData.profile.docImg}`}
+                  src={`${API_URL}${loggedData.profile.docImg}`}
                   alt="doctor"
                   className="rounded-circle mb-3"
                   width="120"

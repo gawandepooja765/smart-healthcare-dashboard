@@ -3,7 +3,8 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 function Register() {
-const apiUrl = "http://localhost:3000/auth/register"
+   const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
+const apiUrl = `${API_URL}/auth/register`
 const navigate = useNavigate()
 const [formData,setFormData] = useState(
 {

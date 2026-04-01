@@ -8,8 +8,9 @@ const handleSubmit = async (e) => {
 e.preventDefault();
 try {
 const token = localStorage.getItem("token");
+const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 const res = await axios.post(
-"http://localhost:3000/auth/admin/doctor",
+`${API_URL}/auth/admin/doctor`,
 { name, email },
 {
 headers: {
