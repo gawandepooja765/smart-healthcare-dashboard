@@ -62,9 +62,9 @@ const handleSearch = async (e) => {
 const value = e.target.value;
 setQuery(value);
 if (!value) return;
-const res = await axios.get(`http://localhost:3000/auth/admin/search?q=${value}`);
+const res = await axios.get(`${API_URL}/auth/admin/search?q=${value}`);
 setResult(res.data);
-console.log(res)
+c
 };
 const isSearching = query.trim() !== "";
 return (
@@ -206,10 +206,10 @@ return (
                         <tr key={appt._id}>
                            <td>{index + 1}</td>
                            <td className="fw-semibold">
-                              {appt.patientName || "N/A"}
+                              {appt.patientId?.patientName || "N/A"}
                            </td>
                            <td>
-                              {appt.docName || "N/A"}
+                              {appt.doctorId?.fullName || "N/A"}
                            </td>
                            <td>
                               {new Date(appt.appDate).toLocaleDateString("en-IN")}

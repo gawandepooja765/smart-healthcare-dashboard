@@ -12,7 +12,7 @@ export default function ForgotPassword() {
   // Send OTP
   const handleSendOTP = async () => {
     try {
-      await axios.post(`${API_URL}/auth/forgot-password", { email }`);
+      await axios.post(`${API_URL}/auth/forgot-password`, { email });
       alert("OTP sent");
       setStep(2);
     } catch (err) {
