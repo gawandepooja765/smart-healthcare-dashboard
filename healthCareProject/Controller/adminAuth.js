@@ -4,6 +4,7 @@ import userModel from "../models/userSchema.js";
 import docModel from "../models/doctorSchema.js";
 import { adminModel } from "../models/adminSchema.js";
 
+
 export const register = async (req, res) => {
   const { patientName, email, password } = req.body;
 
@@ -41,6 +42,7 @@ export const login = async (req, res) => {
   try {
     let user = await userModel.findOne({ email });
     let role = "user";
+    console.log("user",user)
 
     if (!user) {
       user = await docModel.findOne({ email });
@@ -52,14 +54,21 @@ export const login = async (req, res) => {
       role = "admin";
     }
 
-    if (!user) {
-      return res.status(404).json({ message: "User not found." });
+   if (!user) {
+      return res.status(404).json({
+        exists: false,
+        message: "Email not registered"
+      });
     }
+
+    // return res.status(200).json({
+    //   exists: true,
+    //   message: "Email found"
+    // });
 
     // Check lock
     if (user.lockUntil && user.lockUntil > Date.now()) {
-      return res.status(403).json({
-        message: "Account locked. Please use forgot password."
+      return res.status(403).json({message: "Account locked. Please use forgot password."
       });
     }
 
