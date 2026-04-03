@@ -59,7 +59,7 @@ const Login = ({ setToken }) => {
 
         // 🔴 1. USER NOT FOUND → REGISTER
         if (message.includes("User not found")) {
-          toast.warning("User not found. Please register.");
+          toast.warning("Email not exist. Please register.");
           navigate("/register");
         }
 
@@ -85,6 +85,7 @@ const Login = ({ setToken }) => {
         // 🔴 DEFAULT
         else {
           toast.error(message || "Login failed");
+          console.log(error)
         }
 
       } else {
@@ -132,16 +133,28 @@ const Login = ({ setToken }) => {
           className="btn btn-primary me-2"
           disabled={loading}
         />
-
         <button
+  type="button"
+  className="btn btn-warning "
+  onClick={() => {
+    setFormData({
+      email: "admin123@demo.com",
+      password: "admin123"
+    });
+  }}
+>
+  Use Demo Admin
+</button>
+
+        {/* <button
           type="button"
           className="btn btn-secondary"
           onClick={() => navigate("/register")}
         >
           Register
-        </button>
+        </button> */}
 
-        <p className="mt-3">Don't have an account? Register now</p>
+        <p className="mt-3">Don't have an account ? <Link to="/register"> Register Now </Link></p>
 
         <p className="text-center mt-2">
           <Link to="/forgot-password">Forgot Password?</Link>

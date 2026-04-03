@@ -20,10 +20,7 @@ return (
                   <Link className="nav-link" to="register">
                   Register </Link>
                </li>
-               <li class="nav-item">
-                  <Link className="nav-link" to="add/doctor">
-                  Add doctor </Link>
-               </li>
+              
             </ul>
          </div>
       </div>
