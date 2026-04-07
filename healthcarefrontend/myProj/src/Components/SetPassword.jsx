@@ -28,17 +28,24 @@ const SetPassword = () => {
   };
 
   return (
-    <div className="w-50 m-auto py-5 text-center">
-    <form onSubmit={submitHandler} className="bg-light p-5">
-      <input
-        type="password"
-        placeholder="Enter new password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button type="submit">Set Password</button>
-    </form>
-  
-  </div>
+    <div className="theme-auth-page">
+      <div className="theme-auth-card">
+        <h4 className="text-center mb-3">Set password</h4>
+        <p className="text-muted text-center small mb-4">Choose a secure password for your account.</p>
+        <form onSubmit={submitHandler}>
+          <label className="form-label">New password</label>
+          <input
+            type="password"
+            className="form-control mb-3"
+            placeholder="Enter new password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="btn btn-primary w-100">Set password</button>
+        </form>
+      </div>
+    </div>
   )
 };
 

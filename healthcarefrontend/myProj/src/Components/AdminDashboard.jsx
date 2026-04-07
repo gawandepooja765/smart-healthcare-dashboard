@@ -56,7 +56,7 @@ const todayAppointments = appointments.filter(
 function logout(){
 localStorage.clear();
 delete axios.defaults.headers.common["Authorization"];
-navigate("/login");
+navigate("/");
 }
 const handleSearch = async (e) => {
 const value = e.target.value;
@@ -64,7 +64,6 @@ setQuery(value);
 if (!value) return;
 const res = await axios.get(`${API_URL}/auth/admin/search?q=${value}`);
 setResult(res.data);
-c
 };
 const isSearching = query.trim() !== "";
 return (
@@ -103,11 +102,6 @@ return (
          >
          👨‍⚕️ Add Doctor
          </button>
-         <AddDoctorByAdmin
-            show={showModal}
-            handleClose={() =>
-         setShowModal(false)}
-         />
          <button
          className={`menu-item ${
          activePage === "doctors" ? "active" : ""
@@ -245,7 +239,7 @@ return (
          {activePage === "doctors" && (
          <>
          <h3>All Doctors</h3>
-         <table className="table table-hover shadow bg-white mt-3">
+         <table className="table table-hover shadow bg-white mt-3 admin-doctors-table">
             <thead className="table-dark">
                <tr>
                   <th>#</th>
@@ -266,8 +260,12 @@ return (
                   <td>{e.authDoctorId?.email}</td>
                   <td>{e.specialization}</td>
                   <td>{e.exp}</td>
-                  <td><button className="btn btn-warning" onClick={() => handleEdit(e._id)}>Edit</button></td>
-                  <td><button className="btn btn-danger" onClick={()=>handleDelete(e._id)}>Delete</button></td>
+                  <td>
+                     <button type="button" className="btn btn-sm admin-doctor-btn-edit" onClick={() => handleEdit(e._id)}>Edit</button>
+                  </td>
+                  <td>
+                     <button type="button" className="btn btn-sm admin-doctor-btn-delete" onClick={()=>handleDelete(e._id)}>Delete</button>
+                  </td>
                </tr>
                )
                })
@@ -345,6 +343,11 @@ return (
          )}
       </div>
    </div>
+   <AddDoctorByAdmin
+      show={showModal}
+      handleClose={() =>
+   setShowModal(false)}
+   />
 </div>
 );
 };

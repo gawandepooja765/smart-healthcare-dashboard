@@ -36,8 +36,8 @@ toast.error(message);
 if (!show) return null;
 return (
 <>
-<div className="modal-backdrop fade show"></div>
-<div className="modal show d-block">
+<div className="modal-backdrop fade show add-doctor-backdrop"></div>
+<div className="modal show d-block add-doctor-modal">
    <div className="modal-dialog modal-dialog-centered">
       <div className="modal-content">
          <div className="modal-header">

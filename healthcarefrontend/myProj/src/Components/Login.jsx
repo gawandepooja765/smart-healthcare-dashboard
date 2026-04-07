@@ -98,10 +98,11 @@ const Login = ({ setToken }) => {
   }
 
   return (
-    <div className="container w-50 m-auto my-5">
-      <h2 className="text-info text-center mb-4">Login Form</h2>
+    <div className="theme-auth-page">
+      <div className="theme-auth-card">
+      <h2 className="text-center mb-4">Login</h2>
 
-      <form className="border p-5" onSubmit={submitHandler}>
+      <form onSubmit={submitHandler}>
         
         <div className="mb-3">
           <label className="form-label">Email address</label>
@@ -161,6 +162,7 @@ const Login = ({ setToken }) => {
         </p>
 
       </form>
+      </div>
     </div>
   );
 };

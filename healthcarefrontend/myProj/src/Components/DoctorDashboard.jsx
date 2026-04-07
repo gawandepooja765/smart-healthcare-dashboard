@@ -12,8 +12,9 @@ FaCalendarAlt,
 FaDashcube,
 FaUserEdit,
 } from "react-icons/fa";
-import axios, { all } from "axios";
+import axios from "axios";
 import "../custom_table.css";
+import "../doctor-dashboard.css";
 const DoctorDashboard = () => {
 
 const navigate = useNavigate();
@@ -109,7 +110,7 @@ await axios.put(
 );
 alert("Account deactivated");
 localStorage.clear();
-navigate("/login");
+navigate("/");
 } catch {
 alert("Error deactivating account");
 }
@@ -131,7 +132,7 @@ console.error(err);
 };
 const dataToShow = query ? searchData : totalAppointments;
 return (
-<div className="container-fluid bg-light vh-100">
+<div className="container-fluid bg-light vh-100 doctor-dashboard-page">
    {/* Navbar */}
    <nav className="navbar navbar-light bg-white shadow-sm px-4">
       <span className="navbar-brand mb-0 h4">👨‍⚕️ Doctor Dashboard</span>
@@ -146,7 +147,7 @@ return (
             {
             localStorage.clear();
             delete axios.defaults.headers.common["Authorization"];
-            navigate("/login");
+            navigate("/");
             }}
             >
             <FaSignOutAlt />
@@ -251,42 +252,58 @@ return (
                className="form-control"
                />
          </div>
-         {/* Dashboard Cards */}
-         <div className="row text-center mb-4">
-            <div className="col-md-3">
-               <div className="card p-3 shadow d-flex flex-row align-items-center justify-content-between border-bottom-0 border-end-0 rounded-start rounded-top border-primary">
-                  <div>
-                     <h6>Total Patients</h6>
-                     <h4>{totalPatients.length}</h4>
+         {/* Dashboard stat cards */}
+         <div className="row mb-4 doctor-stat-cards-row g-3">
+            <div className="col-6 col-lg-3">
+               <div className="card doctor-stat-card doctor-stat-card--patients border-0 shadow-sm h-100">
+                  <div className="card-body d-flex flex-row align-items-center justify-content-between gap-2">
+                     <div className="doctor-stat-card__text text-start">
+                        <p className="doctor-stat-card__label mb-1">Total patients</p>
+                        <p className="doctor-stat-card__value mb-0">{totalPatients.length}</p>
+                     </div>
+                     <div className="doctor-stat-card__icon doctor-stat-card__icon--patients">
+                        <FaUserInjured />
+                     </div>
                   </div>
-                  <FaUserInjured className="fs-1 text-primary" />
                </div>
             </div>
-            <div className="col-md-3">
-               <div className="card p-3 shadow d-flex flex-row align-items-center justify-content-between border-bottom-0 border-end-0 rounded-start rounded-top border-primary">
-                  <div>
-                     <h6>Total Appointments</h6>
-                     <h4>{totalAppointments.length}</h4>
+            <div className="col-6 col-lg-3">
+               <div className="card doctor-stat-card doctor-stat-card--appointments border-0 shadow-sm h-100">
+                  <div className="card-body d-flex flex-row align-items-center justify-content-between gap-2">
+                     <div className="doctor-stat-card__text text-start">
+                        <p className="doctor-stat-card__label mb-1">Appointments</p>
+                        <p className="doctor-stat-card__value mb-0">{totalAppointments.length}</p>
+                     </div>
+                     <div className="doctor-stat-card__icon doctor-stat-card__icon--appointments">
+                        <FaCalendarAlt />
+                     </div>
                   </div>
-                  <FaCalendarAlt className="fs-1 text-dark" />
                </div>
             </div>
-            <div className="col-md-3">
-               <div className="card p-3 shadow d-flex flex-row align-items-center justify-content-between border-bottom-0 border-end-0 rounded-start rounded-top border-primary">
-                  <div>
-                     <h6>Today</h6>
-                     <h4>{todayCount}</h4>
+            <div className="col-6 col-lg-3">
+               <div className="card doctor-stat-card doctor-stat-card--today border-0 shadow-sm h-100">
+                  <div className="card-body d-flex flex-row align-items-center justify-content-between gap-2">
+                     <div className="doctor-stat-card__text text-start">
+                        <p className="doctor-stat-card__label mb-1">Today</p>
+                        <p className="doctor-stat-card__value mb-0">{todayCount}</p>
+                     </div>
+                     <div className="doctor-stat-card__icon doctor-stat-card__icon--today">
+                        <FaCalendarCheck />
+                     </div>
                   </div>
-                  <FaCalendarCheck className="fs-1 text-success" />
                </div>
             </div>
-            <div className="col-md-3">
-               <div className="card p-3 shadow d-flex flex-row align-items-center justify-content-between border-bottom-0 border-end-0 rounded-start rounded-top border-primary">
-                  <div>
-                     <h6>Upcoming</h6>
-                     <h4>{upcomingCount}</h4>
+            <div className="col-6 col-lg-3">
+               <div className="card doctor-stat-card doctor-stat-card--upcoming border-0 shadow-sm h-100">
+                  <div className="card-body d-flex flex-row align-items-center justify-content-between gap-2">
+                     <div className="doctor-stat-card__text text-start">
+                        <p className="doctor-stat-card__label mb-1">Upcoming</p>
+                        <p className="doctor-stat-card__value mb-0">{upcomingCount}</p>
+                     </div>
+                     <div className="doctor-stat-card__icon doctor-stat-card__icon--upcoming">
+                        <FaBell />
+                     </div>
                   </div>
-                  <FaBell className="fs-1 text-warning" />
                </div>
             </div>
          </div>

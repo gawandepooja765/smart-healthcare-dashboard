@@ -48,14 +48,16 @@ const PateintProfile = () => {
   };
 
   return (
-    <div className = "container" style={{width:"600px", margin:"50px auto"}}>
+    <div className="theme-auth-page">
+    <div className="container" style={{ maxWidth: 560, margin: "0 auto" }}>
+      <div className="theme-auth-card">
+      <h2 className="mb-3">Complete profile</h2>
+      <p className="text-muted small mb-4">Add your details to finish setup.</p>
 
-      <h2>Complete Profile</h2>
-
-      <form onSubmit={handleSubmit} className="border p-4 bg-light">
+      <form onSubmit={handleSubmit}>
 
         <div className="mb-3">
-          <label class="form-label">Phone</label>
+          <label className="form-label">Phone</label>
           <input
             className="form-control"
             type="text"
@@ -67,7 +69,7 @@ const PateintProfile = () => {
         </div>
 
         <div className="mb-3">
-          <label class="form-label">Gender</label>
+          <label className="form-label">Gender</label>
           <select
             className="form-control"
             name="gender"
@@ -82,7 +84,7 @@ const PateintProfile = () => {
         </div>
 
         <div className="mb-3">
-          <label class="form-label">Date of Birth</label>
+          <label className="form-label">Date of birth</label>
           <input
             className="form-control"
             type="date"
@@ -93,10 +95,11 @@ const PateintProfile = () => {
           />
         </div>
 
-        <button type="submit">Save Profile</button>
+        <button type="submit" className="btn btn-primary w-100">Save profile</button>
 
       </form>
-
+      </div>
+    </div>
     </div>
   );
 };

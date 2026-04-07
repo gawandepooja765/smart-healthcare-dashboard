@@ -62,7 +62,8 @@ alert("Something went wrong!");
 }
 }
 return (
-<div className="container mt-5 w-50 m-auto">
+<div className="theme-doctor-form-page">
+<div className="container theme-doctor-form-card">
    <div className="card shadow-lg border-0 rounded-4">
       <div className="card-body p-4">
          <h3 className="text-center text-primary mb-4">Edit Doctor Details</h3>
@@ -169,6 +170,7 @@ return (
          </form>
       </div>
    </div>
+</div>
 </div>
 );
 }

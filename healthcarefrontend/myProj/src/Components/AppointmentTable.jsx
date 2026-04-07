@@ -2,7 +2,7 @@ import React from "react";
 const AppointmentTable = ({ title, data, handleStatusChange }) => {
 if (!Array.isArray(data)) return null;
 return (
-<div className="mb-4">
+<div className="mb-4 theme-appointment-table-wrap">
    <h4 className="mb-3">{title}</h4>
    <table className="table table-hover shadow-sm bg-white">
       <thead className="table-primary">

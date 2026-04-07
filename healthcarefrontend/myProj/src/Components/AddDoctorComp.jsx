@@ -114,7 +114,8 @@ if (!loggedData) return
 <p className="text-center mt-5">Loading...</p>
 ;
 return (
-<div className="container mt-5 w-50 m-auto">
+<div className="theme-doctor-form-page">
+<div className="container theme-doctor-form-card">
    <div className="card shadow-lg border-0 rounded-4">
       <div className="card-body p-4">
          <h3 className="text-center text-primary mb-4">Add Doctor Details</h3>
@@ -194,6 +195,7 @@ return (
          </form>
       </div>
    </div>
+</div>
 </div>
 );
 }

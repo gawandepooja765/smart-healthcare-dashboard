@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../doctor-dashboard.css";
 import { FaUser, FaSearch, FaSignOutAlt } from "react-icons/fa";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -129,14 +130,14 @@ Authorization: `Bearer ${token}`,
 );
 alert("Profile deleted");
 localStorage.removeItem("token");
-navigate("/login");
+navigate("/");
 } catch (err) {
 console.error(err);
 alert("Delete failed");
 }
 };
 return (
-<div className="container-fluid bg-light vh-100 ">
+<div className="container-fluid bg-light vh-100 patient-dashboard-page">
    {/* Navbar */}
    <nav className="navbar navbar-light bg-white shadow-sm px-4">
       <span className="navbar-brand h4">🧑 Patient Dashboard</span>
@@ -145,7 +146,7 @@ return (
          onClick={() =>
          {
          localStorage.clear();
-         navigate("/login");
+         navigate("/");
          }}
          >
          <FaSignOutAlt />
@@ -209,13 +210,6 @@ return (
                >
                Edit Profile
                </button>
-               <EditPatientModal
-                  show={showModal}
-                  handleClose={() =>
-               setShowModal(false)}
-               patientData={loggedData}
-               refreshData={getLoggedUser}
-               />
                <button
                   className="list-group-item list-group-item-action ps-4 text-danger"
                   onClick={() => handleDelete(loggedData._id)}
@@ -400,6 +394,12 @@ return (
          )}
       </div>
    </div>
+   <EditPatientModal
+      show={showModal}
+      handleClose={() => setShowModal(false)}
+      patientData={loggedData}
+      refreshData={getLoggedUser}
+   />
 </div>
 );
 };

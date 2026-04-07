@@ -1,0 +1,74 @@
+.register-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(800px 280px at 10% 0%, rgba(30, 136, 229, 0.14), transparent 55%),
+    radial-gradient(800px 280px at 100% 0%, rgba(13, 71, 161, 0.12), transparent 55%),
+    #eef4ff;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border: 1px solid rgba(13, 71, 161, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+  padding: 1.75rem 1.5rem;
+}
+
+.register-header h2 {
+  margin: 0;
+  color: #0f3b7a;
+  font-weight: 700;
+}
+
+.register-header p {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  color: #636c78;
+}
+
+.register-form .form-label {
+  color: #334155;
+  font-weight: 600;
+}
+
+.register-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #cfdbef;
+  min-height: 44px;
+}
+
+.register-form .form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.16);
+}
+
+.register-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.3rem;
+}
+
+.register-actions .btn {
+  min-width: 130px;
+  border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  .register-card {
+    padding: 1.3rem 1rem;
+  }
+
+  .register-actions {
+    flex-direction: column;
+  }
+
+  .register-actions .btn {
+    width: 100%;
+  }
+}

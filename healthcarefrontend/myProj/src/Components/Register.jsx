@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import '../register.css';
 function Register() {
    const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 const apiUrl = `${API_URL}/auth/register`
@@ -30,35 +31,33 @@ toast.warning("Email already exist..")
 }
 }
 return (
-<div className='container w-50 m-auto my-5'>
-   <h2 className='text-info text-center mb-4'> Registration Form </h2>
-   <form className='border p-5' onSubmit={submitHandler}>
-      <div class="mb-3">
-         <label for="exampleInputEmail1" className="form-label"> Enter full name </label>
-         <input type="text" className="form-control" name='patientName' onChange={inputHandler} />
+<div className='register-page'>
+   <div className='register-card'>
+      <div className='register-header'>
+         <h2>Registration Form</h2>
+         <p>Create your account to access the healthcare dashboard.</p>
       </div>
-      <div class="mb-3">
-         <label for="exampleInputEmail1" className="form-label">Email address</label>
-         <input type="email" className="form-control" name='email' onChange={inputHandler} />
-      </div>
-      {/* 
-      <div class="mb-3">
-         <label for="exampleInputEmail1" className="form-label">Role</label>
-         <select name='role' className='form-control' onChange={inputHandler}>
-            <option value="">Select role</option>
-            <option value="admin"> Admin </option>
-            <option value="doctor"> Doctor </option>
-         </select>
-      </div>
-      */}
-      <div class="mb-3">
-         <label for="exampleInputPassword1" class="form-label">Password</label>
-         <input type="password" className="form-control" name='password' onChange={inputHandler}/>
-      </div>
-      <input type="submit" class="btn btn-primary me-4" />
-      <Link to='/add_doctorDetails'>
-      <button className='btn btn-primary'> Add Profile</button></Link>
-   </form>
+      <form className='register-form' onSubmit={submitHandler}>
+         <div className="mb-3">
+            <label htmlFor="patientName" className="form-label">Enter full name</label>
+            <input id="patientName" type="text" className="form-control" name='patientName' onChange={inputHandler} />
+         </div>
+         <div className="mb-3">
+            <label htmlFor="email" className="form-label">Email address</label>
+            <input id="email" type="email" className="form-control" name='email' onChange={inputHandler} />
+         </div>
+         <div className="mb-3">
+            <label htmlFor="password" className="form-label">Password</label>
+            <input id="password" type="password" className="form-control" name='password' onChange={inputHandler}/>
+         </div>
+         <div className='register-actions'>
+            <input type="submit" value="Register" className="btn btn-primary me-2" />
+            {/* //<Link to='/add_doctorDetails'>
+               <button type='button' className='btn btn-outline-primary'>Add Profile</button>
+            </Link>// */}
+         </div>
+      </form>
+   </div>
 </div>
 )
 }

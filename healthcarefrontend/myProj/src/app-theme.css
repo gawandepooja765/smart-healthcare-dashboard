@@ -1,0 +1,250 @@
+/* Shared CareLink theme — auth pages, forms, tables, modals */
+
+/* ---------- Auth / simple form pages (Login, Forgot, Set password, etc.) ---------- */
+.theme-auth-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #eef4ff;
+  background-image:
+    radial-gradient(900px 280px at 10% 0%, rgba(30, 136, 229, 0.14), transparent 55%),
+    radial-gradient(900px 280px at 100% 0%, rgba(13, 71, 161, 0.12), transparent 55%);
+}
+
+.theme-auth-page .theme-auth-card {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(13, 71, 161, 0.1);
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
+  padding: 2rem 1.75rem;
+}
+
+.theme-auth-page .theme-auth-card h2,
+.theme-auth-page .theme-auth-card h4 {
+  color: #0f3b7a;
+  font-weight: 800;
+}
+
+.theme-auth-page .form-label {
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.theme-auth-page .form-control {
+  border-radius: 10px;
+  border: 1px solid #cfdbef;
+  min-height: 44px;
+}
+
+.theme-auth-page .form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.16);
+}
+
+.theme-auth-page .btn-primary {
+  background: #0d47a1 !important;
+  border: none !important;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.theme-auth-page .btn-success {
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.theme-auth-page .btn-warning {
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.theme-auth-page a {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* ---------- Multi-section doctor forms (Add / Edit profile) ---------- */
+.theme-doctor-form-page {
+  min-height: 100vh;
+  padding: 2rem 1rem 3rem;
+  background-color: #eef4ff;
+  background-image:
+    radial-gradient(900px 280px at 10% 0%, rgba(30, 136, 229, 0.12), transparent 55%),
+    radial-gradient(900px 280px at 100% 0%, rgba(13, 71, 161, 0.1), transparent 55%);
+}
+
+.theme-doctor-form-page .theme-doctor-form-card {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.theme-doctor-form-page .card {
+  border-radius: 18px !important;
+  border: 1px solid rgba(13, 71, 161, 0.1) !important;
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.1) !important;
+}
+
+.theme-doctor-form-page .card h3 {
+  color: #0f3b7a !important;
+  font-weight: 800;
+}
+
+.theme-doctor-form-page .form-control,
+.theme-doctor-form-page .form-select {
+  border-radius: 10px;
+  border: 1px solid #cfdbef;
+}
+
+.theme-doctor-form-page .btn-primary,
+.theme-doctor-form-page .btn-success {
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* ---------- Doctor dashboard appointment tables ---------- */
+.theme-appointment-table-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.theme-appointment-table-wrap > h4 {
+  color: #0f3b7a;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.theme-appointment-table-wrap .table {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(13, 71, 161, 0.12);
+}
+
+.theme-appointment-table-wrap .table thead.table-primary th {
+  background: #eaf2ff !important;
+  color: #0f3b7a !important;
+  font-weight: 700;
+  border-color: rgba(13, 71, 161, 0.12) !important;
+}
+
+.theme-appointment-table-wrap .table td,
+.theme-appointment-table-wrap .table th {
+  vertical-align: middle;
+}
+
+.theme-appointment-table-wrap .badge {
+  border-radius: 999px;
+  font-weight: 650;
+  padding: 0.35rem 0.65rem;
+}
+
+/* ---------- My Appointments standalone component ---------- */
+.theme-my-appts {
+  padding: 1.5rem;
+  background: #f4f8ff;
+  border-radius: 16px;
+  border: 1px solid rgba(13, 71, 161, 0.1);
+}
+
+.theme-my-appts h2 {
+  color: #0f3b7a;
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.theme-my-appts .theme-tab-btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(13, 71, 161, 0.2);
+  background: #ffffff;
+  color: #334155;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-my-appts .theme-tab-btn:hover {
+  border-color: #0d47a1;
+  color: #0d47a1;
+}
+
+.theme-my-appts .theme-tab-btn.active {
+  background: linear-gradient(90deg, #0d47a1 0%, #1e88e5 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.theme-my-appts .table {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(13, 71, 161, 0.12);
+  background: #ffffff;
+}
+
+.theme-my-appts .table thead th {
+  background: #eaf2ff;
+  color: #0f3b7a;
+  font-weight: 700;
+  border-color: rgba(13, 71, 161, 0.12);
+}
+
+.theme-my-appts .table td {
+  border-color: rgba(13, 71, 161, 0.1);
+  vertical-align: middle;
+}
+
+/* ---------- Edit patient modal (overlay) ---------- */
+.edit-patient-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 1045 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.edit-patient-modal {
+  z-index: 1050 !important;
+  position: fixed !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+}
+
+.edit-patient-modal .modal-dialog {
+  margin: 0 !important;
+  max-width: 440px;
+  width: 100%;
+}
+
+.edit-patient-modal .modal-content {
+  border-radius: 14px;
+  border: 1px solid rgba(13, 71, 161, 0.12);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
+}
+
+.edit-patient-modal .modal-header {
+  border-bottom: 1px solid rgba(13, 71, 161, 0.1);
+}
+
+.edit-patient-modal .modal-title {
+  color: #0f3b7a;
+  font-weight: 800;
+}
+
+.edit-patient-modal .form-control {
+  border-radius: 10px;
+  border: 1px solid #cfdbef;
+}
+
+.edit-patient-modal .btn-primary {
+  background: #0d47a1 !important;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+}

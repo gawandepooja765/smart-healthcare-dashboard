@@ -36,7 +36,7 @@ refreshData(); // reload profile
 handleClose();
 } catch (err) {
 console.error(err);
-toast.danger("Update failed");
+toast.error("Update failed");
 }
 };
 const formatDate = (date) =>
@@ -44,9 +44,9 @@ date ? new Date(date).toISOString().split("T")[0] : "";
 if (!show) return null;
 return (
 <>
-<div className="modal-backdrop fade show "></div>
-<div className="modal show fade d-block" tabIndex="-1">
-   <div className="modal-dialog">
+<div className="modal-backdrop fade show edit-patient-backdrop"></div>
+<div className="modal show fade d-block edit-patient-modal" tabIndex="-1">
+   <div className="modal-dialog modal-dialog-centered">
       <div className="modal-content">
          <div className="modal-header">
             <h5 className="modal-title">Edit Profile</h5>

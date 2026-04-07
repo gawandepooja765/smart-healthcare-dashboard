@@ -1,0 +1,83 @@
+/* Appointment page — matches Home / CareLink theme */
+.appointment-page {
+  min-height: 100vh;
+  padding: 2rem 1rem 3rem;
+  background-color: #eef4ff;
+  background-image:
+    radial-gradient(900px 300px at 10% 0%, rgba(30, 136, 229, 0.14), transparent 55%),
+    radial-gradient(900px 300px at 100% 0%, rgba(13, 71, 161, 0.12), transparent 55%);
+}
+
+.appointment-page .appointment-card {
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid rgba(13, 71, 161, 0.1);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  padding: 2rem 1.75rem;
+}
+
+.appointment-page .appointment-card h3 {
+  color: #0f3b7a;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.appointment-page .form-label {
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.appointment-page .form-control,
+.appointment-page select.form-control {
+  border-radius: 10px;
+  border: 1px solid #cfdbef;
+  min-height: 44px;
+}
+
+.appointment-page .form-control:focus,
+.appointment-page select.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.16);
+}
+
+.appointment-page .btn-primary {
+  background: #0d47a1 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 10px 22px rgba(13, 71, 161, 0.2);
+}
+
+.appointment-page .btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.appointment-page .btn-outline-success {
+  border-radius: 10px;
+  border-color: #0d47a1;
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+.appointment-page .btn-outline-success:hover {
+  background: #0d47a1;
+  border-color: #0d47a1;
+  color: #fff;
+}
+
+.appointment-page .btn-success {
+  background: #0d47a1 !important;
+  border-color: #0d47a1 !important;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .appointment-page .appointment-card {
+    padding: 1.25rem 1rem;
+  }
+}

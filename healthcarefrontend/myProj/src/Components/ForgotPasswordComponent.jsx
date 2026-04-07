@@ -37,20 +37,21 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="container mt-5">
-
+    <div className="theme-auth-page">
+      <div className="theme-auth-card">
       {/* STEP 1 */}
       {step === 1 && (
         <>
-          <h4>Forgot Password</h4>
+          <h4 className="mb-3">Forgot password</h4>
+          <p className="text-muted small mb-3">Enter your email to receive an OTP.</p>
           <input
             type="email"
             placeholder="Enter email"
-            className="form-control mb-2"
+            className="form-control mb-3"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="btn btn-primary" onClick={handleSendOTP}>
+          <button className="btn btn-primary w-100" onClick={handleSendOTP}>
             Send OTP
           </button>
         </>
@@ -59,29 +60,27 @@ export default function ForgotPassword() {
       {/* STEP 2 */}
       {step === 2 && (
         <>
-          <h4>Reset Password</h4>
-
+          <h4 className="mb-3">Reset password</h4>
           <input
             type="text"
             placeholder="Enter OTP"
-            className="form-control mb-2"
+            className="form-control mb-3"
             value={otp}
             onChange={(e) => setOtp(e.target.value)}
           />
-
           <input
             type="password"
-            placeholder="New Password"
-            className="form-control mb-2"
+            placeholder="New password"
+            className="form-control mb-3"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
           />
-
-          <button className="btn btn-success" onClick={handleReset}>
-            Reset Password
+          <button className="btn btn-success w-100" onClick={handleReset}>
+            Reset password
           </button>
         </>
       )}
+      </div>
     </div>
   );
 }

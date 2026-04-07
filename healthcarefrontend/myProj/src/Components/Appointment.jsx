@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "../appointment.css";
 function Appointment() {
 const API_URL = "https://smart-healthcare-dashboard-b1wk.onrender.com"
 const { _id } = useParams();
@@ -100,16 +101,17 @@ toast.success("Appointment booked successfully");
 navigate("/patient_dashboard");
 } catch (err) {
 console.log(err.response?.data || err.message);
-toast.danger("Appointment failed");
+toast.error("Appointment failed");
 }
 }
 return (
-<div className="container mt-5">
-   <div className="card shadow p-4">
+<div className="appointment-page">
+<div className="container">
+   <div className="card shadow appointment-card">
       <h3 className="text-center mb-4">Patient Appointment Form</h3>
       <form onSubmit={submitHandler}>
          {/* NAME */}
-         <label className="form-label text-primary"> Pateint Name: </label>
+         <label className="form-label">Patient name</label>
          <input
             type="text"
             className="form-control mb-3"
@@ -119,7 +121,7 @@ return (
             required
             />
          {/* PHONE */}
-         <label className="form-label text-primary"> Contact Number: </label>
+         <label className="form-label">Contact number</label>
          <input
             type="tel"
             className="form-control mb-3"
@@ -129,7 +131,7 @@ return (
             required
             />
          {/* DOB */}
-         <label className="form-label text-primary"> Date of Birth: </label>
+         <label className="form-label">Date of birth</label>
          <input
             type="date"
             className="form-control mb-3"
@@ -138,7 +140,7 @@ return (
             onChange={inputHandler}
             />
          {/* GENDER */}
-         <label className="form-label text-primary"> Gender: </label>
+         <label className="form-label">Gender</label>
          <select
             className="form-control mb-3"
             name="gender"
@@ -152,7 +154,7 @@ return (
             <option>Other</option>
          </select>
          {/* APPOINTMENT DATE */}
-         <label className="form-label text-primary"> Appointment Date: </label>
+         <label className="form-label">Appointment date</label>
          <input
             type="date"
             className="form-control mb-3"
@@ -204,6 +206,7 @@ return (
    Book Appointment
    </button>
    </form>
+</div>
 </div>
 </div>
 );
